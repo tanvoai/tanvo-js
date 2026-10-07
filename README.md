@@ -127,6 +127,10 @@ All extend `TanvoError` with `code` (stable string), `status` and `issues`. Fail
 | `TANVO_API_KEY` | API key (or `new Tanvo({ apiKey })`) |
 | `TANVO_BASE_URL` | Another deployment (default `https://tanvo.ai`) |
 
+## Documentation
+
+Full API reference (every endpoint, field, error and limit): [tanvo.ai/developers/api](https://tanvo.ai/developers/api?utm_source=github&utm_medium=referral). Machine-readable spec: [tanvo.ai/openapi.yaml](https://tanvo.ai/openapi.yaml).
+
 ## Also from Tanvo
 
 - [tanvo-mcp](https://github.com/tanvoai/tanvo-mcp): the same apps and models inside Claude, Cursor and other MCP clients.
