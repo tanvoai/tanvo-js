@@ -1,18 +1,48 @@
 {
-  "name": "tanvo",
+  "name": "@tanvoai/sdk",
   "version": "0.1.0",
   "description": "TypeScript / JavaScript client for Tanvo: AI images, video and songs on Nano Banana, Seedream, GPT Image, Veo, Kling, Seedance and Suno, plus 80 ready-made photo apps. Zero dependencies; Node 20+, Deno, Bun and browsers. The house image engine works without an API key.",
-  "keywords": ["tanvo", "ai-image-generator", "ai-video-generator", "text-to-image", "image-to-video", "text-to-video", "ai-music", "nano-banana", "seedream", "kling", "veo", "seedance", "suno", "sdk", "api"],
+  "keywords": [
+    "tanvo",
+    "ai-image-generator",
+    "ai-video-generator",
+    "text-to-image",
+    "image-to-video",
+    "text-to-video",
+    "ai-music",
+    "nano-banana",
+    "seedream",
+    "kling",
+    "veo",
+    "seedance",
+    "suno",
+    "sdk",
+    "api"
+  ],
   "homepage": "https://tanvo.ai/?utm_source=npm&utm_medium=referral",
-  "repository": { "type": "git", "url": "git+https://github.com/tanvoai/tanvo-js.git" },
-  "bugs": { "url": "https://github.com/tanvoai/tanvo-js/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanvoai/tanvo-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tanvoai/tanvo-js/issues"
+  },
   "author": "Tanvo (https://tanvo.ai)",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
-  "files": ["dist", "README.md", "LICENSE"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -23,5 +53,10 @@
     "@types/node": "^20",
     "typescript": "^5"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

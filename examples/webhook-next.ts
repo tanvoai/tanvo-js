@@ -1,5 +1,5 @@
 // app/api/tanvo/route.ts in a Next.js app: receive finished runs instead of polling.
-import { verifyWebhook } from "tanvo";
+import { verifyWebhook } from "@tanvoai/sdk";
 
 export async function POST(req: Request) {
   const raw = await req.text(); // the raw body: do not parse before verifying

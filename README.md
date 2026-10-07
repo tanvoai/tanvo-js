@@ -1,6 +1,6 @@
 # Tanvo for JavaScript and TypeScript
 
-[![npm](https://img.shields.io/npm/v/tanvo)](https://www.npmjs.com/package/tanvo) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@tanvoai/sdk)](https://www.npmjs.com/package/@tanvoai/sdk) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 The JavaScript / TypeScript client for [Tanvo](https://tanvo.ai/?utm_source=github&utm_medium=referral), an AI image, video and music studio. Generate images on Nano Banana, Seedream, GPT Image and Qwen, video on Veo, Kling, Seedance and Wan, and songs on Suno, or run one of 80 ready-made photo apps (pet portraits, figurines, old photo restoration, trend videos) on your own photos.
 
@@ -10,13 +10,13 @@ The JavaScript / TypeScript client for [Tanvo](https://tanvo.ai/?utm_source=gith
 - Retries that never double-charge (every submit carries an idempotency key).
 
 ```bash
-npm install tanvo
+npm install @tanvoai/sdk
 ```
 
 ## Quick start
 
 ```ts
-import { Tanvo } from "tanvo";
+import { Tanvo } from "@tanvoai/sdk";
 
 const tanvo = new Tanvo(); // reads TANVO_API_KEY; without one it runs on the free tier
 const image = await tanvo.generateImage({ prompt: "a paper lantern floating over a misty lake at dawn", aspect: "16:9" });
@@ -99,7 +99,7 @@ await tanvo.generateVideo({ prompt: "…", model: "veo-3-1", webhookUrl: "https:
 Verify the delivery with the secret from Settings → Webhooks (works on Node, Edge and Workers):
 
 ```ts
-import { verifyWebhook } from "tanvo";
+import { verifyWebhook } from "@tanvoai/sdk";
 
 export async function POST(req: Request) {
   const generation = await verifyWebhook(process.env.TANVO_WEBHOOK_SECRET!, req.headers, await req.text());

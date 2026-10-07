@@ -1,5 +1,5 @@
 // node examples/quickstart.mjs: one free image, no API key needed.
-import { Tanvo } from "tanvo";
+import { Tanvo } from "@tanvoai/sdk";
 
 const tanvo = new Tanvo();
 const image = await tanvo.generateImage({ prompt: "a paper lantern floating over a misty lake at dawn", aspect: "16:9" });
